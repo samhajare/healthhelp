@@ -28,6 +28,9 @@ export class User {
 
   @Column({ type: 'jsonb', name: 'insured_persons', nullable: true })
   insuredPersons: InsuredPerson[];
+  
+  @Column({ type: 'text', name: 'other', nullable: true })
+  other: string;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
