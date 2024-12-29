@@ -32,6 +32,42 @@
 $ npm install
 ```
 
+## Database Migrations
+
+### Prerequisites
+Make sure you have all required dependencies installed:
+```bash
+npm install --save-dev typeorm-ts-node-commonjs @types/node ts-node typescript
+```
+
+### Available Migration Commands
+
+1. Generate a new migration:
+```bash
+npm run migration:generate --name=CreateUsers
+```
+Example: `npm run migration:generate --name=CreateUsers`
+
+2. Run pending migrations:
+```bash
+npm run migration:run
+```
+
+3. Revert the last migration:
+```bash
+npm run migration:revert
+```
+
+### Migration File Location
+All migration files are stored in `src/migrations/` directory.
+
+### Important Notes
+- Always review generated migrations before running them
+- Make sure your database is backed up before running migrations in production
+- Migration files are automatically timestamped
+- Never modify an existing migration that has been applied to any environment
+- If you need to make changes, create a new migration instead
+
 ## Compile and run the project
 
 ```bash
