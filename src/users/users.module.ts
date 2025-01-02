@@ -8,5 +8,6 @@ import { UserRepository } from './users.repository';
   imports: [TypeOrmExModule.forCustomRepository([UserRepository])],
   controllers: [UsersController],
   providers: [UsersService],
+  exports: [UsersService],
 })
 export class UsersModule {}

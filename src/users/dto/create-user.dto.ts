@@ -47,5 +47,18 @@ export class CreateUserDto {
   @IsString()
   @ApiProperty()
   other?: string;
+
+  @IsString()
+  @ApiProperty()
+  password: string;
 }
 
+export class LoginUserDto {
+  @IsString()
+  @ApiProperty()
+  username: string;
+
+  @IsString()
+  @ApiProperty()
+  password: string;
+}
