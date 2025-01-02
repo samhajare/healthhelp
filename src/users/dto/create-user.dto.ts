@@ -42,5 +42,23 @@ export class CreateUserDto {
   @IsArray()
   @ApiProperty()
   insuredPersons?: InsuredPersonDto[];
+
+  @IsOptional()
+  @IsString()
+  @ApiProperty()
+  other?: string;
+
+  @IsString()
+  @ApiProperty()
+  password: string;
 }
 
+export class LoginUserDto {
+  @IsString()
+  @ApiProperty()
+  username: string;
+
+  @IsString()
+  @ApiProperty()
+  password: string;
+}
